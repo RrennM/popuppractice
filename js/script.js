@@ -58,7 +58,7 @@
 // }
 
 
-var buttons = document.getElementsByTagName("button");
+var buttons = document.getElementsByTagName("a");
 var buttonsLength = buttons.length;
 
 for (i = 0; i < buttonsLength; i++) {
@@ -69,11 +69,9 @@ for (i = 0; i < buttonsLength; i++) {
 
   buttonClicked.addEventListener("click", function() {
     console.log(this.id);
-    // console.log(this.children[0].id);
-    var r = this.children[0];
+    var r = this.children[1];
     console.log(r.id);
     var popup = document.getElementById(r.id);
     popup.classList.toggle("show");
-    // console.log("myPopup" + i.toString());
   });
 }

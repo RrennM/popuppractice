@@ -1,36 +1,46 @@
 body {
-    background-color: red;
+    /*background-color: red;*/
     text-align: center;
+}
+
+main {
+    background-color: lightgrey;
+    margin: 10px auto;
+    width: 90%;
 }
 
 /* Popup container */
 .popup {
-    position: relative;
-    display: inline-block;
+    background: pink;
     cursor: pointer;
-    margin-top: 100px;
-    width: 80%;
+    display: inline-block;
+    margin: 100px 1%;
+    position: relative;
+    text-align: center;
+    width: 30%;
+    vertical-align: center;
 }
 
 /* The actual popup (appears on top) */
 .popup .popuptext {
-    visibility: hidden;
-    width: 80%;
-    height: 60px;
     background-color: #4d6;
-    color: #fff;
-    text-align: center;
     border-radius: 3px;
-    padding: 8px 0;
-    position: absolute;
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    overflow: scroll;
+    position: fixed;
+    margin: 2% auto;
+    text-align: center;
+    visibility: hidden;
+    width: 95%;
     z-index: 1;
-    bottom: 125%;
-    left: 25%;
-    margin-left: -80px;
 }
 
 /* Popup arrow */
-.popup .popuptext::after {
+/*.popup .popuptext::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -40,6 +50,7 @@ body {
     border-style: solid;
     border-color: #555 transparent transparent transparent;
 }
+*/
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
 .popup .show {
@@ -59,14 +70,89 @@ body {
     to {opacity:1 ;}
 }
 
-.popup .popuptext img {
+
+
+/*Left side of popup*/
+.popup .popuptext .img-box {
     width: 45%;
     float: left;
-    padding-left: 1%;
+    padding: 1%;
+    max-height: 48.5%;
+}
+.popup .popuptext img {
+    max-width: 100%;
+    margin: 1% auto;
+    max-height: 49%;
 }
 
+/*end left side of popup*/
+
+
+/*right side of popup*/
 .popup .popuptext .textbox {
     width: 45%;
     float: left;
+    height: 90%;
+    text-align: left;
+}
 
+.popup .popuptext .textbox h1 {
+    margin: 2em 1em;
+}
+
+.popup .popuptext .tool-list {
+    float: left;
+    width: 40%;
+    margin: 0 0 20px;
+}
+
+.popup .popuptext .textbox ul li {
+    text-align: left;
+    list-style: none;
+    line-height: 2em;
+}
+
+.popup .popuptext .textbox h3 {
+    clear: both;
+    text-align: left;
+    margin: 2em 2em;
+    font-weight: 700;
+}
+
+.popup .popuptext .textbox h3:first-of-type {
+    clear: both;
+    text-align: left;
+    margin: 1em 2em;
+}
+
+.popup .popuptext .textbox p {
+    text-align: left;
+    margin: 0 2em 1em; 
+    line-height: 1.6;
+}
+
+
+
+/*end right side of popup*/
+
+
+/*individual popup features*/
+#myPopup0 {
+    background-color: seagreen;
+}
+
+#myPopup1 {
+    background-color: lightblue;
+}
+
+#myPopup2 {
+    background-color: indianred;
+}
+/*end individual popup features*/
+
+.thumbnail {
+    /*max-height: 300px;*/
+    max-width: 100%;
+    display: flex;
+    margin: 0 auto;
 }
